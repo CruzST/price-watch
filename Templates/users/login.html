@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+    <header><h1>Log In</h1></header>
+    <p>Sample User: user1@fakemail.com<br>Sample PW: 1234</p>
+    <hr>
+    <section class="login-form">
+        <form method="post" action="/users/login">
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password: </label>
+                <input type="password" class="form-control" id="password" name="password" />
+            </div>
+            <button type="submit"class="btn btn-primary">Log In</button>
+        </form>
+    </section>
+{% endblock %}

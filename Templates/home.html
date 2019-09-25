@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Price Watch Application</h1>
+        <p class="lead">Application is able to alert you of price drops for items of your interest.</p>
+        <hr class="my-4">
+        <p>In order to use the application, please sign up and begin adding urls of the items you want to track.</p>
+        <a class="btn btn-primary btn-lg" href="{{ url_for('users.register_user') }}">Get Started</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    <header><h1>List of Alerts</h1></header>
+    <hr>
+    <section>
+        <div class="list-group mb-3">
+            {% for alert in alerts %}
+                <div class="list-group-item">
+                    <h4>{{ alert.name }}</h4>
+                    <p>Last Updated Price: ${{alert.item.price}}</p>
+                    <p>Your Price Limit: ${{alert.price_limit}}</p>
+                    <p><a href="{{alert.item.url}}">{{ alert.item._id }}</a></p>
+                    <a class="btn btn-warning" href="{{ url_for('alerts.edit_alert', alert_id=alert._id) }}">Edit</a>
+                    <a class="btn btn-danger" href="{{ url_for('alerts.delete_alert', alert_id=alert._id) }}">Delete</a>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- url_for('alerts.new_alert') link to the alerts blueprint which is named 'alerts' -->
+        <a class="btn btn-primary" href="{{ url_for('alerts.new_alert') }}">Create New </a>
+    </section>
+{% endblock %}
