@@ -16,10 +16,10 @@ app.config.update(
 def home():
     return render_template('home.html')
 
+
 @app.route('/favicon.ico')
 def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static', 'images'),
-                               'favicon.ico', mimetype='image/png')
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico')
 
 
 app.register_blueprint(alert_blueprint, url_prefix='/alerts')
