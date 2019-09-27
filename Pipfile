@@ -14,7 +14,6 @@ pymongo = "*"
 passlib = "*"
 python-dotenv = "*"
 dnspython = "*"
-uwsgi = "*"
 
 [requires]
 python_version = "3.7"
