@@ -1,5 +1,4 @@
 # price-watch
-https://price-watch-crzst.herokuapp.com/stores/
 
 ## Pre-loaded users
 user1@fakemail.com | 1234
